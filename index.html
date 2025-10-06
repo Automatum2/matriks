@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Kalkulator Matriks</h1>
+
+        <div class="kalkulator-container">
+            <!-- Panel Kontrol -->
+            <div class="panel-kontrol">
+                <div class="grup-kontrol">
+                    <label for="operasi">Pilih Operasi:</label>
+                    <select id="operasi">
+                        <option value="tambah">Penjumlahan (+)</option>
+                        <option value="kurang">Pengurangan (-)</option>
+                        <option value="kali">Perkalian (x)</option>
+                        <option value="determinan">Determinan</option>
+                        <option value="invers">Invers</option>
+                        <option value="transpos">Transpos</option>
+                    </select>
+                </div>
+                <button id="tombol-buat-matriks">Buat Matriks</button>
+            </div>
+
+            <!-- Panel Input Matriks -->
+            <div class="panel-matriks">
+                <div class="matriks-input" id="matriks-a-container">
+                    <h3>Matriks A</h3>
+                    <div class="grup-ordo">
+                        <input type="number" id="baris-a" min="1" max="10" placeholder="Baris">
+                        <span>x</span>
+                        <input type="number" id="kolom-a" min="1" max="10" placeholder="Kolom">
+                    </div>
+                    <div class="grid-matriks" id="grid-a"></div>
+                </div>
+                
+                <div class="matriks-input" id="matriks-b-container">
+                    <h3>Matriks B</h3>
+                    <div class="grup-ordo">
+                        <input type="number" id="baris-b" min="1" max="10" placeholder="Baris">
+                        <span>x</span>
+                        <input type="number" id="kolom-b" min="1" max="10" placeholder="Kolom">
+                    </div>
+                    <div class="grid-matriks" id="grid-b"></div>
+                </div>
+            </div>
+
+            <!-- Panel Aksi dan Hasil -->
+            <div class="panel-hasil">
+                <button id="tombol-hitung" disabled>Hitung</button>
+                <div id="area-hasil">
+                    <h3>Hasil:</h3>
+                    <div id="output-hasil"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="matriks.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

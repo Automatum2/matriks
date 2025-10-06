@@ -1,0 +1,177 @@
+:root {
+    --warna-latar: #f0f2f5;
+    --warna-panel: #ffffff;
+    --warna-border: #d9d9d9;
+    --warna-teks: #333;
+    --warna-utama: #007bff;
+    --warna-utama-hover: #0056b3;
+    --font-utama: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-utama);
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main {
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--warna-utama);
+    margin-bottom: 24px;
+}
+
+.kalkulator-container {
+    background-color: var(--warna-panel);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.panel-kontrol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--warna-border);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.grup-kontrol label {
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+select, input[type="number"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--warna-border);
+    font-family: var(--font-utama);
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--warna-utama);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--warna-utama-hover);
+}
+
+button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.panel-matriks {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.matriks-input {
+    flex: 1;
+    padding: 16px;
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+}
+
+.matriks-input h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.grup-ordo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.grup-ordo input {
+    width: 80px;
+    text-align: center;
+}
+
+.grid-matriks {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+}
+
+.grid-matriks input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.panel-hasil {
+    text-align: center;
+}
+
+#area-hasil {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px dashed var(--warna-border);
+    border-radius: 8px;
+    min-height: 100px;
+    display: none; /* Sembunyi sampai ada hasil */
+}
+
+#output-hasil {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: pre; /* Agar format teks terjaga */
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- GAYA BARU UNTUK TABEL HASIL --- */
+#output-hasil table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+#output-hasil td {
+    border: 1px solid var(--warna-border);
+    padding: 10px 15px;
+    min-width: 50px;
+    text-align: center;
+    font-family: var(--font-utama);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#output-hasil table {
+    border-left: 2px solid var(--warna-utama);
+    border-right: 2px solid var(--warna-utama);
+}
+
+#output-hasil tr:first-child td {
+    border-top: 2px solid var(--warna-utama);
+}
+
+#output-hasil tr:last-child td {
+    border-bottom: 2px solid var(--warna-utama);
+}
